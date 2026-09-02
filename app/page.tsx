@@ -25,7 +25,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="relative flex flex-col flex-1 bg-[#FFFCF5] text-[#14121F] overflow-x-hidden">
+    <div className="relative flex flex-col flex-1 text-[#14121F] overflow-x-hidden">
       <PolaroidBackground opacity={0.85} />
 
       {/* HERO */}

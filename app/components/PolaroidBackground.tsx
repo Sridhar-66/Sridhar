@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 
 type Photo = {
   src: string;
@@ -27,10 +29,14 @@ function seededRandom(seed: number) {
 const POSITIONS = [
   { top: "6%", left: "8%" },
   { top: "12%", left: "78%" },
+  { top: "25%", left: "15%" },
+  { top: "34%", left: "45%" },
+  { top: "45%", left: "75%" },
   { top: "58%", left: "4%" },
   { top: "68%", left: "82%" },
-  { top: "34%", left: "45%" },
+  { top: "75%", left: "20%" },
   { top: "80%", left: "50%" },
+  { top: "90%", left: "85%" },
 ];
 
 type PolaroidBackgroundProps = {
@@ -68,10 +74,11 @@ export default function PolaroidBackground({
             }}
           >
             <div className="bg-[#FFFCF5] border-4 border-[#14121F] rounded-sm p-2 pb-6 shadow-[6px_6px_0_0_rgba(20,18,31,0.25)]">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
+              <Image
                 src={photo.src}
                 alt={photo.alt ?? ""}
+                width={192}
+                height={192}
                 className="w-40 h-40 sm:w-48 sm:h-48 object-cover"
                 draggable={false}
               />
