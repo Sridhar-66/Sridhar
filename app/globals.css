@@ -15,36 +15,62 @@ body {
   font-family: var(--font-body), sans-serif;
 }
 
+/* Font mapping */
 .font-display {
   font-family: var(--font-display), sans-serif;
 }
 
+.font-accent {
+  font-family: var(--font-accent), serif;
+  font-style: italic;
+}
+
+.font-body {
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Marquee */
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-track {
   animation: marquee 22s linear infinite;
 }
 
+/* Hero badge */
 @keyframes wiggle-in {
-  0% { opacity: 0; transform: translateY(24px) rotate(-2deg); }
-  100% { opacity: 1; transform: translateY(0) rotate(-2deg); }
+  0% {
+    opacity: 0;
+    transform: translateY(24px) rotate(-2deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotate(-2deg);
+  }
 }
 
 .hero-badge {
   animation: wiggle-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s backwards;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-  .hero-badge { animation: none; }
-}
-
+/* Floating polaroids */
 @keyframes polaroid-float {
-  0%, 100% { translate: 0 0; }
-  50% { translate: 0 -14px; }
+  0%,
+  100% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -14px;
+  }
 }
 
 .animate-polaroid-float {
@@ -53,6 +79,62 @@ body {
   animation-iteration-count: infinite;
 }
 
+/* Hero swing */
+@keyframes swingIn {
+  0% {
+    transform: rotate(-8deg) translateY(24px);
+    opacity: 0;
+  }
+
+  60% {
+    transform: rotate(2deg) translateY(-4px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate(-2deg) translateY(0);
+  }
+}
+
+.hero-swing {
+  animation: swingIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Paper grain overlay */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Signboard stripe */
+.signboard-track {
+  background: repeating-linear-gradient(
+    -45deg,
+    #E63E1F 0px,
+    #E63E1F 22px,
+    #120E1F 22px,
+    #120E1F 44px
+  );
+}
+
+/* Stamp border */
+.stamp-border {
+  border: 3px dashed #120E1F;
+}
+
+/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
-  .animate-polaroid-float { animation: none; }
+  .marquee-track,
+  .hero-badge,
+  .animate-polaroid-float,
+  .hero-swing {
+    animation: none;
+  }
 }
