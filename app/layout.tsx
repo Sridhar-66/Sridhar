@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: "Co-founder of NxtStepEdu. B.Tech CSE. Building at the intersection of education and technology.",
 };
 
-export default function RootLayout({ children }: LayoutProps<"/">) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"

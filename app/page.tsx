@@ -30,7 +30,7 @@ export default function Home() {
         <div
           className="hero-badge inline-block -rotate-2 bg-[#FFD93D] border-4 border-[#14121F] rounded-full px-5 py-1.5 mb-8 font-display font-semibold text-sm"
         >
-          currently building things that shouldn't work but do
+          currently building things that shouldn&apos;t work but do
         </div>
 
         <h1 className="font-display font-bold leading-[0.9] tracking-tight text-[15vw] sm:text-[8rem] md:text-[9rem]">
@@ -46,13 +46,13 @@ export default function Home() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          
+          <a
             href="#life"
             className="rounded-full bg-[#14121F] text-[#FFFCF5] px-7 py-3.5 font-display font-semibold border-4 border-[#14121F] transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#FF4D8D]"
           >
-            See what I'm about
+            See what I&apos;m about
           </a>
-          
+          <a
             href="#contact"
             className="rounded-full bg-[#FFFCF5] text-[#14121F] px-7 py-3.5 font-display font-semibold border-4 border-[#14121F] transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#6C3CE9]"
           >
@@ -95,11 +95,11 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-6 gap-5">
           <div className="md:col-span-4 rounded-3xl bg-[#FF4D8D] border-4 border-[#14121F] p-8">
             <h3 className="font-display font-bold text-2xl mb-3">
-              I'm building NxtStepEdu
+              I&apos;m building NxtStepEdu
             </h3>
             <p className="text-[#14121F]/90 leading-relaxed">
               A mobile-first, cloud-based school management ERP. Schools run
-              on paperwork and scattered spreadsheets — I'm trying to fix
+              on paperwork and scattered spreadsheets — I&apos;m trying to fix
               that, one feature at a time.
             </p>
           </div>
@@ -124,8 +124,8 @@ export default function Home() {
               Research at IIM Vizag
             </h3>
             <p className="text-[#14121F]/90 leading-relaxed">
-              Alongside the startup, I'm doing a research internship under
-              Preeti Ma'am — a different kind of building, but I like the
+              Alongside the startup, I&apos;m doing a research internship under
+              Preeti Ma&apos;am — a different kind of building, but I like the
               balance of it.
             </p>
           </div>
@@ -169,15 +169,15 @@ export default function Home() {
         className="relative px-6 sm:px-12 py-24 bg-[#6C3CE9] flex-1 flex flex-col justify-center items-start"
       >
         <h2 className="font-display font-bold text-5xl sm:text-6xl text-[#FFFCF5] leading-[0.95] mb-6">
-          Let's build
+          Let&apos;s build
           <br />
           something.
         </h2>
         <p className="text-[#FFFCF5]/80 text-lg max-w-md mb-8">
           Open to conversations about edtech, internships, research, or
-          anything you think I'd find interesting.
+          anything you think I&apos;d find interesting.
         </p>
-        
+        <a
           href="mailto:you@example.com"
           className="rounded-full bg-[#FFD93D] text-[#14121F] px-8 py-4 font-display font-semibold border-4 border-[#14121F] transition-transform hover:-translate-y-1 hover:shadow-[4px_4px_0_0_#14121F]"
         >
