@@ -41,3 +41,18 @@ body {
   .marquee-track { animation: none; }
   .hero-badge { animation: none; }
 }
+
+@keyframes polaroid-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -14px; }
+}
+
+.animate-polaroid-float {
+  animation-name: polaroid-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-polaroid-float { animation: none; }
+}

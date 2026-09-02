@@ -1,3 +1,5 @@
+import PolaroidBackground from "./components/PolaroidBackground";
+
 export default function Home() {
   const journey = [
     {
@@ -23,7 +25,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col flex-1 bg-[#FFFCF5] text-[#14121F] overflow-x-hidden">
+    <div className="relative flex flex-col flex-1 bg-[#FFFCF5] text-[#14121F] overflow-x-hidden">
+      <PolaroidBackground opacity={0.85} />
 
       {/* HERO */}
       <section className="relative border-b-4 border-[#14121F] px-6 sm:px-12 pt-20 pb-16">
